@@ -8,7 +8,7 @@ if(isset($_REQUEST['cadastrar']))
     {
         include 'includes/conexao.php';
 
-        $sql = "INSERT INTO alunos (nome, data_nascimento, sexo,
+        $sql = "INSERT INTO aluno (nome, data_nascimento, sexo,
                                     genero, cpf, cidade, estado,
                                     bairro, rua, cep)
                         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
@@ -32,6 +32,7 @@ if(isset($_REQUEST['cadastrar']))
 }
 ?>
 <link href="css/estilos.css" type="text/css" rel="stylesheet" />
+<?php include_once 'includes/cabecalho.php' ?>
 <div>
 <fieldset>
     <legend>Cadastro de Aluno </legend>

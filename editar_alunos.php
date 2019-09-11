@@ -8,7 +8,7 @@ if(isset($_REQUEST['atualizar']))
     {
         include 'includes/conexao.php';
 
-        $sql = "UPDATE alunos SET nome = ?, data nascimento = ?, sexo =?,
+        $sql = "UPDATE aluno SET nome = ?, data nascimento = ?, sexo =?,
                                   genero = ?, cpf =?, cidade = ?, estado = ?,
                                   bairro = ?, rua = ?, cep = ?
                               WHERE id_aluno = ?) ";
@@ -34,6 +34,8 @@ if(isset($_REQUEST['atualizar']))
 
 ?>
 <link href="css/estilos.css" type="text/css" rel="stylesheet" />
+
+<?php include_once 'includes/cabecalho.php' ?>
 <div>
 <fieldset>
     <legend>Cadastro de Aluno </legend>
